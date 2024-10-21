@@ -139,10 +139,7 @@ def draw_play_button():
     screen.blit(play_button_img, (play_button_rect.x, play_button_rect.y))  # Draw play button image
 
 def draw_replay_close_buttons():
-    # Draw Replay button image
     screen.blit(replay_button_img, (replay_button_rect.x, replay_button_rect.y))
-
-    # Draw Close button image
     screen.blit(close_button_img, (close_button_rect.x, close_button_rect.y))
 
 # Game Loop
@@ -152,7 +149,7 @@ game_over = False
 
 while running:
     screen.fill((0, 0, 0))
-    screen.blit(background, (0, 0))
+    screen.blit(background, (0, 0))#FOR BACKGROUNG IMAGE
 
     if not game_started:
         draw_play_button()  # Show play button image
@@ -209,7 +206,7 @@ while running:
         playerY += playerY_change
         playerX = max(0, min(playerX, 736))
         playerY = max(0, min(playerY, 550)) 
-#
+#ENEMY MOVEMENT
         for i in range(num_of_enemies):
             if enemyY[i] > 440:
                 game_over = True  
